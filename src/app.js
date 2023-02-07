@@ -19,3 +19,7 @@ app.use("/api/career", careerRoute);
 app.get("/test", (req, res) => {
   res.send("App is working...");
 });
+
+app.use("/", (req, res) => {
+  res.send("Root is working...");
+});
