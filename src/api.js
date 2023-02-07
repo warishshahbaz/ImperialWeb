@@ -3,23 +3,24 @@
 require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
+const serverless = require("serverless-http")
 const app = express();
 const { dbConnection } = require("./config/db");
-const { server } = require("./config/server");
 const careerRoute = require("./routes/careerRoute");
+const router = express.Router();
 
-dbConnection();
-server(app);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use("/api/career", careerRoute);
+//app.use("/career", careerRoute);
 
-app.get("/test", (req, res) => {
+router.get("/", (req, res) => {
   res.send("App is working...");
 });
 
-app.use("/", (req, res) => {
-  res.send("Root is working...");
-});
+app.use("/.netlify/functions/api", router);
+app.use("/.netlify/functions/api/career", careerRoute);
+
+dbConnection();
+module.exports.handler = serverless(app)
