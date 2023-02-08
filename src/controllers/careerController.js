@@ -29,11 +29,11 @@ const saveApply = async function (req, res, next) {
 };
 const allApply = async function (req, res, next) {
   try {
-   const apply =  await careerModel.find()
+   //const apply =  await careerModel.find()
     return res.status(201).send({
       status: true,
       message: "Query executed successfully.",
-      data: apply,
+      data: 'apply',
     });
   } catch (error) {
     return res.status(500).send({
