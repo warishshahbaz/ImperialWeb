@@ -4,7 +4,10 @@ mongoose.set("strictQuery", true);
 const dbConnection = async function () {
   try {
     await mongoose
-      .connect(process.env.DB_URI, {
+      .connect(
+        //process.env.DB_URI
+        'mongodb+srv://sonu:mdshahbazwarish1996@sonuproject.hdiyklc.mongodb.net/ImperialWebDB?retryWrites=true&w=majority'
+        , {
         useNewUrlParser: true,
         useUnifiedTopology: true,
       })
