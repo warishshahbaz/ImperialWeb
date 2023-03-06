@@ -1,6 +1,6 @@
 const server = async function (app) {
   try {
-    app.listen(process.env.PORT, (error) => {
+    app.listen(process.env.PORT || 8080, (error) => {
       if (error) console.error(error);
       console.log(`Server is running on port : ${process.env.PORT}`);
     });
@@ -10,4 +10,4 @@ const server = async function (app) {
   }
 };
 
-//module.exports.server = server;
+module.exports.server = server;

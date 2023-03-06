@@ -5,12 +5,12 @@ const dbConnection = async function () {
   try {
     await mongoose
       .connect(
-        //process.env.DB_URI
-        'mongodb+srv://sonu:mdshahbazwarish1996@sonuproject.hdiyklc.mongodb.net/ImperialWebDB?retryWrites=true&w=majority'
-        , {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-      })
+        `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@sonuproject.hdiyklc.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`,
+        {
+          useNewUrlParser: true,
+          useUnifiedTopology: true,
+        }
+      )
       .then((pass) =>
         console.log(
           `MongoDb is connected. Database Name : "${pass.connections[0].name}"`
