@@ -1,10 +1,13 @@
 //  *********      SONU VERMA         **********           SONU VERMA          ***********             //
 
+const path = require('path'); 
+require('dotenv').config({ path: path.join(__dirname, '.env') });
+
 require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const logger = require("morgan");
-const path = require("path");
+// const path = require("path");
 var cors = require("cors");
 const app = express();
 const { dbConnection } = require("./config/db");
