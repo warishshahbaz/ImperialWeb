@@ -22,19 +22,19 @@ function Header() {
               {/* <Nav.Link>logo</Nav.Link> */}
             </Nav>
             <Nav className="me-auto header_items ">
-              <NavLink to="/" className="li_item">
+              <NavLink to="/home" className="li_item">
                 Home
               </NavLink>
-              <NavLink to="/aboutUs" className="li_item">
+              <NavLink to="/aboutus" className="li_item">
                 About Us
               </NavLink>
-              <NavLink to="/conatctUs" className="li_item" eventKey={2}>
+              <NavLink to="/conatctus" className="li_item" eventKey={2}>
                 Contact Us
               </NavLink>
               <NavLink to="/career" className="li_item">
                 Career
               </NavLink>
-              <NavLink to="/Gallery" className="li_item">
+              <NavLink to="/gallery" className="li_item">
                 Gallery
               </NavLink>
             </Nav>

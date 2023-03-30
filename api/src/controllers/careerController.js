@@ -7,7 +7,7 @@ const path = require("path");
 const saveApply = async function (req, res, next) {
   try {
     const resumeName = req.files[0].originalname;
-   // console.log(req.files);
+    // console.log(req.files);
     fs.writeFileSync(
       path.join(__dirname, `../public/resume/${resumeName}`),
       req.files[0].buffer
@@ -25,11 +25,17 @@ const saveApply = async function (req, res, next) {
       resume: process.env.BASE_URL + "/resume/" + resumeName,
       message: req.body.message,
     });
-    // await SendEmail(1, `
-    
-    // url : ${data.resume}
 
-    // `);
+    const htmL = `<h4>
+    name : ${req.body.name} ,
+    email : ${req.body.email} ,
+    phone : ${req.body.phone} ,
+    resume : ${data.resume} 
+    </h4>`;
+
+    const mailLog = await SendEmail(req.body.email, htmL, "Job Application");
+    // console.log("mailLog       ", mailLog);
+
     return res.status(201).send({
       status: true,
       message: "Applied successfull.",
@@ -63,16 +69,21 @@ const allApply = async function (req, res, next) {
 };
 const contact = async function (req, res, next) {
   try {
-    const apply = await contactModel.create(req.body);
-    const htmL = 
-    `<h4>
-    name : ${req.body.name} 
-    email : ${req.body.email} 
-    phone : ${req.body.phone} 
-    message : ${req.body.message} 
-    </h4>`
-    // await SendEmail(1, htmL);
-
+    const body = {
+      name: req.body.name || "",
+      email: req.body.email || "",
+      phone: req.body.phone || "",
+      message: req.body.message || "",
+    };
+    const apply = await contactModel.create(body);
+    const htmL = `<h4>
+    name : ${body.name} ,
+    email : ${body.email} ,
+    phone : ${body.phone} ,
+    message : ${body.message} 
+    </h4>`;
+    const mailLog = await SendEmail(body.email, htmL, "Contact Us");
+    // console.log("mailLog       ", mailLog);
     return res.status(201).send({
       status: true,
       message: "Query executed successfully.",
