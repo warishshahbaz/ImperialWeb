@@ -1,9 +1,9 @@
 import { Button } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import JobModal from "./jobs";
 
 const Career = () => {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const JobFun = () => {
     setOpen(true);
   };
@@ -16,30 +16,48 @@ const Career = () => {
        "
       >
         <div className=" mt-12 p-4 ">
-          <p className="text-xl text-[black] font-bold sm:font-bold   ">
+          <p
+            className="text-xl text-[black] font-bold sm:font-bold"
+            data-aos="flip-up"
+          >
             What we do?
           </p>
           <div className="flex sm:flex-row flex-col  ">
-            <h2 className="mr-10 text-xl sm:font-bold font-medium  sm:text-3xl md:text-4xl text-[black]">
+            <h2
+              className="mr-10 text-xl sm:font-bold font-medium  sm:text-3xl md:text-4xl text-[black]"
+              data-aos="flip-up"
+            >
               We build creative experience
             </h2>
-            <Button style={{borderRadius:"23px"}} onClick={JobFun} variant="contained" size="medium">
-          Browse Jobs
-        </Button>
+            <Button
+              style={{ borderRadius: "23px" }}
+              onClick={JobFun}
+              variant="contained"
+              data-aos="slide-left"
+              size="medium"
+            >
+              Browse Jobs
+            </Button>
           </div>
         </div>
       </div>
-      <div className=" flex justify-center items-center " >
+      {/* <div className=" flex justify-center items-center " >
         <img src="./image/career-map.jpg" className=" md:w-[80vw]  " alt="logo" />
-      </div>
-      <div className="grid md:grid-cols-2 p-3 place-content-start place-items-center ">
+      </div> */}
+      <div className="grid md:grid-cols-2 mt-2 w-full place-content-around place-items-center ">
         <img
+          data-aos="flip-up"
           src="https://www.alzaincorporation.com/wp-content/themes/alza/assets/images/services/ba.png"
           alt=""
         />
         <div className="">
-          <h2 className="font-serif mt-2 p-2 sm:text-3xl text-2xl ">BUSINESS ASSOCIATE (BA)</h2>
-          <p className="p-md text-sm md:text-xl font-sen ">
+          <h2
+            className="font-serif mt-2 p-2 sm:text-3xl text-2xl "
+            data-aos="slide-left"
+          >
+            BUSINESS ASSOCIATE (BA)
+          </h2>
+          <p className="p-md text-sm md:text-xl font-sen " data-aos="fade-left">
             A business associate is required to attend corporate meetings,
             tele-calling residential meetings, several training workshops and
             earn more profitability. Responsibilities : The responsibilities of
@@ -50,14 +68,24 @@ const Career = () => {
             Business Associate role: Conveying a Positive Attitude Customer
             Service Skills Time Management Work Ethics Accountability Consistent
             Performance Profitability ━━{" "}
-            <span className="text-[gray] text-sm sm:text-lg ">Tenure : 3-4 Weeks</span>
+            <span className="text-[gray] text-sm sm:text-lg ">
+              Tenure : 3-4 Weeks
+            </span>
           </p>
         </div>
       </div>
       <div className="grid md:grid-cols-2 p-3 ">
         <div>
-          <h2 className="font-serif mt-2 p-2 sm:text-3xl text-2xl">HRD TRAINER</h2>
-          <p className="p-md text-sm md:text-xl -2 font-sen ">
+          <h2
+            className="font-serif mt-2 p-2 sm:text-3xl text-2xl"
+            data-aos="slide-left"
+          >
+            HRD TRAINER
+          </h2>
+          <p
+            className="p-md text-sm md:text-xl -2 font-sen "
+            data-aos="fade-left"
+          >
             The role of an HRD trainer is to observe people or situations,
             recruitment and retention of employees, actively conduct training
             sessions, give corporate presentations, set examples for others to
@@ -73,18 +101,25 @@ const Career = () => {
           </p>
         </div>
         <img
+          data-aos="flip-up"
           src="https://www.alzaincorporation.com/wp-content/themes/alza/assets/images/services/trainera.png"
           alt=""
         />
       </div>
       <div className="grid md:grid-cols-2 p-3 ">
         <img
+          data-aos="flip-up"
           src="https://www.alzaincorporation.com/wp-content/themes/alza/assets/images/services/leader.png"
           alt=""
         />
         <div>
-          <h2 className="font-serif mt-2 p-2 sm:text-3xl text-2xl ">EXECUTIVE TRAINER / CREW LEADER</h2>
-          <p className="p-md text-sm md:text-xl font-sen ">
+          <h2
+            className="font-serif mt-2 p-2 sm:text-3xl text-2xl "
+            data-aos="slide-left"
+          >
+            EXECUTIVE TRAINER / CREW LEADER
+          </h2>
+          <p className="p-md text-sm md:text-xl font-sen " data-aos="fade-left">
             The Executive trainer / Crew Leader is expected to build a capable
             team and continuously motivate them, set certain goals, effortlessly
             manage their territories, practice sharing & networking, inculcate
@@ -100,8 +135,13 @@ const Career = () => {
       </div>
       <div className="grid md:grid-cols-2 p-3 ">
         <div>
-          <h2 className="font-serif mt-2 p-2 sm:text-3xl text-2xl ">ASSISTANT MANAGER</h2>
-          <p className="p-md text-lg md:text-xl font-sen ">
+          <h2
+            className="font-serif mt-2 p-2 sm:text-3xl text-2xl "
+            data-aos="slide-left"
+          >
+            ASSISTANT MANAGER
+          </h2>
+          <p className="p-md text-lg md:text-xl font-sen " data-aos="fade-left">
             An Assistant Manager would be responsible for planning and
             strategizing, conducting interviews, handling office administration
             and its dynamics, carrying out sales impact sessions and effectively
@@ -117,18 +157,25 @@ const Career = () => {
           </p>
         </div>
         <img
+          data-aos="flip-up"
           src="https://www.alzaincorporation.com/wp-content/themes/alza/assets/images/services/asst.png"
           alt=""
         />
       </div>
       <div className="grid md:grid-cols-2 p-3 ">
         <img
+          data-aos="flip-up"
           src="https://www.alzaincorporation.com/wp-content/themes/alza/assets/images/services/owner.png"
           alt=""
         />
         <div>
-          <h2 className="font-serif mt-2 p-2 sm:text-3xl text-2xl ">OWNER PARTNER / SBU HEAD</h2>
-          <p className="p-md text-lg md:text-xl font-sen ">
+          <h2
+            className="font-serif mt-2 p-2 sm:text-3xl text-2xl "
+            data-aos="slide-left"
+          >
+            OWNER PARTNER / SBU HEAD
+          </h2>
+          <p className="p-md text-lg md:text-xl font-sen " data-aos="fade-left">
             An owner partner is accountable for the overall handling and running
             of a profitable organization, framing a business plan, attending
             international seminars and networking with several offices globally.
@@ -151,8 +198,6 @@ const Career = () => {
 };
 
 export default Career;
-
-
 
 // [
 //   {

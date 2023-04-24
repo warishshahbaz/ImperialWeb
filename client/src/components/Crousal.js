@@ -16,14 +16,19 @@ function Crousel() {
         <Carousel.Caption>
           <div class="container">
             <div class="row">
-              <div class="col-sm-12 flex justify-center items-center text-center">
-                <motion.h3
-                    animate={{ rotate: 360 }}
-                  transition={{ repeat: Infinity, repeatDelay: 1 , repeatType: "reverse" , type: "spring",bounce: 0.25, stiffness: 50,ease:"easeOut"  }}
+              <div class="col-sm-12 flex justify-center flex-col  ">
+              <h3
                   className=" animate-charcter text-sm-center md:text-[150px] text-5xl sm:text-7xl"
+                  data-aos="slide-left"
                 >
-                  Imperial Management
-                </motion.h3>
+                  Imperial 
+                </h3>
+                <h3
+                  className=" animate-charcter text-sm-center md:text-[150px] text-5xl sm:text-7xl"
+                  data-aos="slide-right"
+                >
+                   Management
+                </h3>
               </div>
             </div>
           </div>
@@ -44,14 +49,19 @@ function Crousel() {
         <Carousel.Caption>
           <div class="container">
             <div class="row">
-              <div class="col-md-12 flex justify-center items-center text-center">
-              <motion.h3
-                  animate={{ rotate: 360 }}
-                  transition={{ repeat: Infinity, repeatDelay: 1 , repeatType: "reverse" , type: "spring",bounce: 0.25, stiffness: 50,ease:"easeOut"  }}
+            <div class="col-sm-12 flex justify-center flex-col  ">
+              <h3
                   className=" animate-charcter text-sm-center md:text-[150px] text-5xl sm:text-7xl"
+                  data-aos="slide-left"
                 >
-                  Imperial Management
-                </motion.h3>
+                  Imperial 
+                </h3>
+                <h3
+                  className=" animate-charcter text-sm-center md:text-[150px] text-5xl sm:text-7xl"
+                  data-aos="slide-right"
+                >
+                   Management
+                </h3>
               </div>
             </div>
           </div>
@@ -72,14 +82,19 @@ function Crousel() {
         <Carousel.Caption>
           <div class="container">
             <div class="row">
-              <div class="col-md-12 flex justify-center items-center text-center">
-              <motion.h3
-                  animate={{ rotate: 360 }}
-                  transition={{ repeat: Infinity, repeatDelay: 1 , repeatType: "reverse" , type: "spring",bounce: 0.25, stiffness: 50,ease:"easeOut"  }}
+            <div class="col-sm-12 flex justify-center flex-col  ">
+              <h3
                   className=" animate-charcter text-sm-center md:text-[150px] text-5xl sm:text-7xl"
+                  data-aos="slide-left"
                 >
-                  Imperial Management
-                </motion.h3>
+                  Imperial 
+                </h3>
+                <h3
+                  className=" animate-charcter text-sm-center md:text-[150px] text-5xl sm:text-7xl"
+                  data-aos="slide-right"
+                >
+                   Management
+                </h3>
               </div>
             </div>
           </div>

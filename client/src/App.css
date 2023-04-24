@@ -233,7 +233,7 @@ svg text {
 /*** career ***********/
 
 .careerHeader{
-  background-image: linear-gradient(to right,pink, red , yellow);
+  background-image: linear-gradient(to left, rgb(107, 203, 177) ,rgb(188, 94, 157), rgb(0, 204, 255) , rgb(189, 189, 87));
 }
 
 /*** Gallery ******************/

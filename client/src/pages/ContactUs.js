@@ -9,8 +9,8 @@ const ContactUs = () => {
   return (
     <>
       <div className="w-[100%] h-[30vh] bg-[black] p-5 flex justify-center items-start flex-col text-[white] ">
-        <p className="p-2 text-4xl font-normal hover:text-[green] ">Connect</p>
-        <h2 className="px-5 text-3xl font-normal">
+        <p className="p-2 sm:text-4xl text-2xl font-normal hover:text-[green] " data-aos="slide-left"  >Connect</p>
+        <h2 className="sm:px-5 text-xl sm:text-3xl font-normal" data-aos="fade-up" >
           We’d love to hear from you, get in touch with us
         </h2>
       </div>
@@ -58,7 +58,7 @@ const ContactUs = () => {
               type="text"
               name="name"
               required
-              className="m-2 sm:w-[500px]"
+              className="m-2 sm:w-[500px] w-[100vw] p-2 "
               id="outlined-basic"
               label="Name"
               variant="outlined"
@@ -67,7 +67,7 @@ const ContactUs = () => {
               type="email"
               name="email"
               required
-              className="m-2 sm:w-[500px] "
+              className="m-2 sm:w-[500px] w-[100vw] p-2 "
               id="outlined-basic"
               label="Email"
               variant="outlined"
@@ -75,15 +75,15 @@ const ContactUs = () => {
             <TextField
               type="textarea"
               name="message"
-              className="m-2 sm:w-[500px] "
+              className="m-2 sm:w-[500px] w-[100vw] p-2 "
               id="outlined-basic"
               label="Message"
               variant="outlined"
             />
             <Button
-              variant="outlined"
+              variant="contained"
               type="submit"
-              className="m-2 sm:w-[500px] hover:text-[gray] mb-3 "
+              className="m-2 sm:w-[500px] w-[100vw]  "
             >
               Submit
             </Button>

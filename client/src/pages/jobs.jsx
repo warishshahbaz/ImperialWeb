@@ -29,36 +29,44 @@ export default function JobModal({ setOpen, open }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [file, setFiles] = useState("");
+  // const [file, setFiles] = useState([]);
   const [data, setData] = useState({});
+
+  const [file, setFile] = useState();
+  const saveFile = (e) => {
+    setFile(e.target.files[0]); 
+  };
 
   const fetchData = async (resumeFile) => {
     try {
-      let res = await axios.post(`${BASE_URL}/api/career/apply`, resumeFile);
-      console.log(res);
+      const formData = new FormData();
+      formData.append("file", file);
+      formData.append("name", name);
+      formData.append("email", email);
+      formData.append("phone", phone);
+      let res = axios
+        .post(
+          `http://api.imperialmanagement.in/api/career/apply`,
+          formData
+        )
+        .then((res) => console.log(res.data))
+        .catch((error) => console.log(error.response.data));
     } catch (error) {
       console.log(error);
     }
   };
-  // console.log(name);
   const submitHandle = async () => {
-    if(name || email || phone || file){
-      setData(
-        {
-          name,
-          email,
-          phone,
-          file,
-        }
-      );
+    if (name || email || phone) {
+      setData({
+        name,
+        email,
+        phone,
+      });
       fetchData(data);
     }
-    
 
     fetchData(data);
   };
-
-  // console.log(data);
 
   return (
     <div>
@@ -74,14 +82,19 @@ export default function JobModal({ setOpen, open }) {
             onClick={() => setOpen(false)}
           />
 
-          <Typography sx={{ fontSize:"1.4rem",fontWeight:"600" }} id="modal-modal-title" variant="h6" component="h2">
+          <Typography
+            sx={{ fontSize: "1.4rem", fontWeight: "600" }}
+            id="modal-modal-title"
+            variant="h6"
+            component="h2"
+          >
             Apply For
           </Typography>
-          <Typography sx={{ color: "yellowgreen",fontSize:"1.2rem" }}>
+          <Typography sx={{ color: "yellowgreen", fontSize: "1.2rem" }}>
             Business Associate(BA)
           </Typography>
           <div className="flex flex-col p-4 sm:w-[100%]  justify-center items-center ">
-            <FormControl sx={{ marginBottom: "14px",width:"100%" }}>
+            <FormControl sx={{ marginBottom: "14px", width: "100%" }}>
               <InputLabel htmlFor="my-input">Name</InputLabel>
               <Input
                 id="my-input"
@@ -90,7 +103,7 @@ export default function JobModal({ setOpen, open }) {
                 aria-describedby="my-helper-text"
               />
             </FormControl>
-            <FormControl sx={{ marginBottom: "14px",width:"100%" }}>
+            <FormControl sx={{ marginBottom: "14px", width: "100%" }}>
               <InputLabel htmlFor="my-input">Email address</InputLabel>
               <Input
                 type="text"
@@ -100,7 +113,7 @@ export default function JobModal({ setOpen, open }) {
                 onChange={(e) => setEmail(e.target.value)}
               />
             </FormControl>
-            <FormControl sx={{ marginBottom: "14px",width:"100%" }}>
+            <FormControl sx={{ marginBottom: "14px", width: "100%" }}>
               <InputLabel htmlFor="my-input">Phone Number</InputLabel>
               <Input
                 type="text"
@@ -110,17 +123,18 @@ export default function JobModal({ setOpen, open }) {
                 onChange={(e) => setPhone(e.target.value)}
               />
             </FormControl>
-            <FormControl sx={{ marginBottom: "14px", width:"100%" }}>
+            <FormControl sx={{ marginBottom: "14px", width: "100%" }}>
               {/* <InputLabel htmlFor="my-input">Phone Number</InputLabel> */}
-              <Input
+              {/* <Input
                 type="file"
                 id="my-input"
                 aria-describedby="my-helper-text"
-                value={file}
-                onChange={(e) => setFiles(e.target)}
-              />
+                // value={file}
+                onChange={(e) => setFiles(e.target.files)}
+              /> */}
+              <input type="file" onChange={saveFile} />
             </FormControl>
-            <FormControl sx={{ marginBottom: "14px",width:"100%" }}>
+            <FormControl sx={{ marginBottom: "14px", width: "100%" }}>
               <Button onClick={submitHandle} variant="contained">
                 Apply Here...
               </Button>

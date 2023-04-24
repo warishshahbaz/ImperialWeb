@@ -6,6 +6,7 @@ import Home from './Home'
 import Vision from './Vision'
 import Conatct from './ConatctCom'
 import Footer from '../pages/Footer'
+import HeighRolEmply from './HeighRolEmply'
 
 function Layout() {
   return (
@@ -14,6 +15,8 @@ function Layout() {
     <Crousel style={{height:'30vh'}} />
     <Home/>
     <Vision/>
+    {/* <HeighRolEmply/> */}
+
     <Conatct/>
     <Outlet/>
   </>

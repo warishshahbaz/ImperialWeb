@@ -9,8 +9,9 @@ function Header() {
       <Navbar
         collapseOnSelect
         expand="lg"
-        className=" bg-opacity-0 "
+        className=" bg-white sticky-top "
         variant="light"
+        
       >
         <Container>
           <Navbar.Brand>
@@ -25,10 +26,10 @@ function Header() {
               <NavLink to="/home" className="li_item">
                 Home
               </NavLink>
-              <NavLink to="/aboutus" className="li_item">
+              <NavLink to="/about" className="li_item">
                 About Us
               </NavLink>
-              <NavLink to="/conatctus" className="li_item" eventKey={2}>
+              <NavLink to="/contact" className="li_item" eventKey={2}>
                 Contact Us
               </NavLink>
               <NavLink to="/career" className="li_item">

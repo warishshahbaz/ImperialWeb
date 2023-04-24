@@ -1,16 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ImForward } from "react-icons/im";
+import AOS from 'aos'
+import HeighRolEmply from "./HeighRolEmply";
+
 // import Pic2 from "../../image/Pic2.png";
 // import { Card, Col, Container, Row } from "react-bootstrap";
 
 function Home() {
+ 
+    useEffect(()=>{
+      AOS.init({duration:2000});
+    },[]);
   return (
     <>
       <div className="p-4 about  ">
         <div className="flex justify-center align-items-center flex-col lg:flex-row  ">
           <div className="" >
             <h3 className="text-4xl sm:text-6xl" >Who we are ?...</h3>
-            <div className="flex-1">
+            <div className="flex-1" data-aos="fade-up"  data-aos-delay="100" >
               <p className="">
                 <span className="">
                   <ImForward />
@@ -48,12 +55,11 @@ function Home() {
             </div>
           </div>
 
-          <div className="p-12">
-            <img src={"/image/pic2.png"} alt="logo" />
+          <div className="p-3 rounded-circle  " data-aos="slide-left">
+            <img src={"/image/pic2.png"} className=" w-[300px] h-[300px] rounded-circle "  alt="logo" />
           </div>
         </div>
       </div>
-      
     </>
   );
 }
