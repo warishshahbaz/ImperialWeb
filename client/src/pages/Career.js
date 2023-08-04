@@ -41,9 +41,7 @@ const Career = () => {
           </div>
         </div>
       </div>
-      {/* <div className=" flex justify-center items-center " >
-        <img src="./image/career-map.jpg" className=" md:w-[80vw]  " alt="logo" />
-      </div> */}
+     
       <div className="grid md:grid-cols-2 mt-2 w-full place-content-around place-items-center ">
         <img
           data-aos="flip-up"
@@ -192,7 +190,10 @@ const Career = () => {
           </p>
         </div>
       </div>
+      <div className="flex justify-center items-center w-full h-[100vh]  " >
       <JobModal setOpen={setOpen} open={open} />
+
+      </div>
     </>
   );
 };

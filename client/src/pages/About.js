@@ -53,7 +53,7 @@ const About = () => {
       <div className="flex sm:flex-row flex-col w-full ">
       <div className="sm:w-[40%] w-full flex justify-center flex-col items-center " >
       <img
-          className=" shadow-lg  grid row-span-2 md:h-[300px] md:w-[300px] w-[200px] h-[200px] rounded-[50%] md:w-[100%] md:object-fill object-cover   object-cover"
+          className=" shadow-lg  grid  md:h-[300px] md:w-[300px] w-[200px] h-[200px] rounded-[50%]  md:object-fill object-cover"
           src="/gallery/pic-2.jpg"
           alt="minhaz"
         />
@@ -167,19 +167,19 @@ const data = [
   {
     id: 2,
     img: "/image/leo.png",
-    title: "Leo",
+    title: "Leo Regish",
     about: "Crew Leader",
   },
   {
     id: 3,
     img: "/image/employee2.jpg",
-    title: "Leo",
-    about: "Team Leader",
+    title: "Atchaya s",
+    about: "Executive leader",
   },
   {
     id: 4,
     img: "/image/employee4.jpg",
-    title: "Leo",
-    about: "Team Leader",
+    title: "Abinaya",
+    about: "Executive leader",
   },
 ];

@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 import axios from "axios";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import { FormControl, FormHelperText, Input, InputLabel } from "@mui/material";
+import { FormControl, Input, InputLabel } from "@mui/material";
 import ClearIcon from "@mui/icons-material/Clear";
 
 const style = {
@@ -12,7 +12,7 @@ const style = {
   top: "40%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: "30vw",
+  width:"30vh",
   minWidth: "300px",
   bgcolor: "background.paper",
   // border: '2px solid #000',
@@ -76,7 +76,7 @@ export default function JobModal({ setOpen, open }) {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box  sx={style} >
           <ClearIcon
             sx={{ position: "absolute", top: "12px", right: "12px" }}
             onClick={() => setOpen(false)}

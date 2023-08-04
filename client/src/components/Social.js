@@ -12,7 +12,7 @@ import {AiFillGooglePlusCircle} from 'react-icons/ai'
 
 export default function SocialApp() {
   return (
-    <div className="fixed  top-[300px] right-[0px] flex flex-col h-[100px] justify-evenly ">
+    <div className="fixed  top-[300px] right-[0px] flex flex-col h-[100px] justify-evenly mx-2 ">
       <a
         href="https://www.facebook.com/profile.php?id=100063804705328"
         target={"_blank"}
