@@ -15,21 +15,24 @@ const style = {
   width:"30vh",
   minWidth: "300px",
   bgcolor: "background.paper",
-  // border: '2px solid #000',
   boxShadow: 24,
   p: 4,
+  "@media (max-width:500px )":{
+    top: "30%",
+    left: "28%",
+  }
 };
 
 const BASE_URL = "http://localhost:8080";
 
 export default function JobModal({ setOpen, open }) {
-  // const [open, setOpen] = React.useState(false);
+ 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  // const [file, setFiles] = useState([]);
+  
   const [data, setData] = useState({});
 
   const [file, setFile] = useState();

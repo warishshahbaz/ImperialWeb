@@ -1,7 +1,6 @@
 import React from "react";
 import { Card, Container, Row } from "react-bootstrap";
 import { BsFacebook } from "react-icons/bs";
-import { BsLinkedin } from "react-icons/bs";
 import { AiFillGooglePlusCircle, AiFillTwitterCircle } from "react-icons/ai";
 import SocialApp from "../components/Social";
 import { GrLinkedin } from "react-icons/gr";
@@ -12,9 +11,9 @@ const Footer = () => {
       <SocialApp />
       <div
         fluid
-        className=" bg-[black] text-[white] w-[100%] p-2 flex sm:flex-row justify-center items-center flex-col "
+        className=" bg-[black] text-[white] min-h-fit w-[100%] p-2 flex sm:flex-row justify-center items-center flex-col "
       >
-        <div className="mt-2 w-[100%]  flex flex-col justify-center sm:flex-row ">
+        <div className="mt-2 w-[100%]  flex flex-col justify-center  sm:flex-row ">
           <div className="max-w-[300px] ">
             <h2>Our Visions</h2>
             <p className="footer_para"  >
@@ -33,7 +32,7 @@ const Footer = () => {
               
             </p>
           </div>
-          <div className="">
+          <div>
             <h2  >Contact</h2>
             <span  >Office phone – 6369595178</span>
             <p className="footer_para"  >HR - +91 9791797780</p>

@@ -158,12 +158,7 @@ const About = () => {
 export default About;
 
 const data = [
-  {
-    id: 1,
-    img: "/image/anjali.jpg",
-    title: "Anjali Hr",
-    about: "Hr Manager",
-  },
+ 
   {
     id: 2,
     img: "/image/leo.png",
