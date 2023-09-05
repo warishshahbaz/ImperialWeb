@@ -54,7 +54,7 @@ const About = () => {
       <div className="sm:w-[40%] w-full flex justify-center flex-col items-center " >
       <img
           className=" shadow-lg  grid  md:h-[300px] md:w-[300px] w-[200px] h-[200px] rounded-[50%]  md:object-fill object-cover"
-          src="/gallery/pic-2.jpg"
+          src="/gallery/minhaz.jpg"
           alt="minhaz"
         />
         <p
