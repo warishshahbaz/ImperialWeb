@@ -7,13 +7,14 @@ const path = require("path");
 const saveApply = async function (req, res, next) {
   try {
     const resumeName = req.files[0].originalname;
-    // console.log(req.files);
+    //  console.log(req.files , req.body);
     fs.writeFileSync(
       path.join(__dirname, `../public/resume/${resumeName}`),
       req.files[0].buffer
     );
 
     const errors = validationResult(req);
+    // console.log(errors);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
@@ -42,6 +43,7 @@ const saveApply = async function (req, res, next) {
       data: "",
     });
   } catch (error) {
+    console.log(error)
     return res.status(500).send({
       status: false,
       message: error.message,
